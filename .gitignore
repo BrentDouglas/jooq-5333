@@ -1,0 +1,21 @@
+# Maven output
+target
+*.versionsBackup
+
+# VIM
+*.swp
+
+# JOE
+*~
+
+# IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+idea
+
+# Eclipse
+.metadata
+.project
+.settings
