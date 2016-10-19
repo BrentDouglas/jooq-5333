@@ -10,7 +10,8 @@
 
     <properties>
         <version.flyway>3.2.1</version.flyway>
-        <version.jooq>3.7.2</version.jooq>
+        <!--<version.jooq>3.8.3</version.jooq>-->
+        <version.jooq>3.9.0-SNAPSHOT</version.jooq>
         <version.postgres>9.4-1203-jdbc42</version.postgres>
 
         <version.junit>4.12</version.junit>
@@ -80,6 +81,7 @@
                     <password>${db.password}</password>
                     <schemas>
                         <schema>public</schema>
+                        <schema>test</schema>
                     </schemas>
                     <locations>
                         <location>filesystem:${project.basedir}/src/main/resources/db/migration</location>
@@ -122,14 +124,14 @@
                             <includes>.*</includes>
                             <schemata>
                                 <schema>
-                                    <inputSchema>public</inputSchema>
+                                    <inputSchema>test</inputSchema>
                                 </schema>
                             </schemata>
                         </database>
                         <generate>
                             <pojosEqualsAndHashCode>true</pojosEqualsAndHashCode>
                             <pojos>true</pojos>
-                            <records>false</records>
+                            <records>true</records>
                         </generate>
                         <target>
                             <packageName>jooq5333</packageName>
